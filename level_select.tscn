@@ -1,3 +1,67 @@
-[gd_scene format=3 uid="uid://d2atwfdlgsbr7"]
+[gd_scene load_steps=2 format=3 uid="uid://d2atwfdlgsbr7"]
 
-[node name="Level-Select" type="Node2D"]
+[ext_resource type="Script" path="res://button.gd" id="1_pgy7v"]
+
+[node name="Level Select" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 523.0
+offset_top = 84.0
+offset_right = 550.0
+offset_bottom = 107.0
+text = "EFFERVESCENE DREAMSCAPE"
+visible_characters = 3
+visible_ratio = 0.172
+
+[node name="Label" type="Label" parent="TextureRect/Label"]
+offset_left = 25.0
+offset_top = 16.0
+offset_right = 72.0
+offset_bottom = 39.0
+text = "ERVES
+"
+
+[node name="Label" type="Label" parent="TextureRect/Label/Label"]
+offset_left = 45.0
+offset_top = 13.0
+offset_right = 92.0
+offset_bottom = 36.0
+text = "CENE
+"
+
+[node name="Label2" type="Label" parent="TextureRect/Label"]
+offset_left = 5.0
+offset_top = 51.0
+offset_right = 110.0
+offset_bottom = 74.0
+text = "DREAMSCAPE"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 501.0
+offset_top = 310.0
+offset_right = 678.0
+offset_bottom = 354.0
+script = ExtResource("1_pgy7v")
+
+[node name="Delve" type="Label" parent="Button"]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 0
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 166.0
+offset_bottom = 34.0
+text = "SLEEP [AND] DELVE."
