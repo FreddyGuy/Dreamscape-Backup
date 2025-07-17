@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=3 uid="uid://qjqu12goud58"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j8yka"]
+font_size = 21
+font_color = Color(0, 0.988847, 0.441237, 1)
+outline_size = 4
+outline_color = Color(1.2514e-06, 0.913165, 0.692957, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[node name="Tutorial_Complete!" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Winner!" type="Label" parent="."]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 57.0
+offset_right = 843.0
+offset_bottom = 87.0
+text = "YOU'VE COMPLETED THE TUTORIAL PART OF THE GAME!"
+label_settings = SubResource("LabelSettings_j8yka")
+
+[node name="DINNER" type="Label" parent="Winner!"]
+layout_mode = 0
+offset_left = -67.0
+offset_top = 28.0
+offset_right = 649.0
+offset_bottom = 51.0
+text = "HOPE IT WASN'T TOO DIFFICULT [HA HA] NOW GET OUT THERE AND PLAY THE ACTUAL GAME!"
+
+[node name="Yeah_" type="Label" parent="."]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 596.0
+offset_right = 635.0
+offset_bottom = 619.0
+text = "GOOD LUCK!"

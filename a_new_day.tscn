@@ -1,3 +1,19 @@
-[gd_scene format=3 uid="uid://34utk3h3fhft"]
+[gd_scene load_steps=2 format=3 uid="uid://34utk3h3fhft"]
+
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_pklj2"]
 
 [node name="A_New_Day" type="Node2D"]
+
+[node name="Bubble" type="CharacterBody2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_pklj2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bubble"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bubble"]
+
+[node name="Camera2D" type="Camera2D" parent="Bubble"]
+
+[node name="Float_Timer" type="Timer" parent="Bubble"]
+wait_time = 3.0

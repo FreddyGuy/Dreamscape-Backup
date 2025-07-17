@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://st2yw5hrtpf4"]
+
+[node name="Keep_Going!" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WOW" type="Label" parent="."]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 4.0
+offset_right = 770.0
+offset_bottom = 27.0
+text = "YOU OBTAINED THE [1ST] GOLDEN DREAM SYMBOL!"
+
+[node name="IE!" type="Label" parent="WOW"]
+layout_mode = 0
+offset_left = -95.0
+offset_top = 25.0
+offset_right = 491.0
+offset_bottom = 48.0
+text = "BUT YOU'RE NOT DONE YET! YOU STILL HAVE A TOTAL OF [2] MORE TO FIND!"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 355.0
+offset_right = 994.0
+offset_bottom = 378.0
+text = "TYPE A MESSAGE BELOW IN THE TEXTBOX TO THEN SHARE TO YOUR FRIENDS AND PROVE [YOU] PLAY GAMES!"
