@@ -1,4 +1,23 @@
-[gd_scene format=3 uid="uid://st2yw5hrtpf4"]
+[gd_scene load_steps=4 format=3 uid="uid://st2yw5hrtpf4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_yixr3"]
+font_size = 24
+font_color = Color(0.640711, 0.770494, 1, 1)
+outline_size = 5
+outline_color = Color(0.787961, 0.884581, 1, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3kn81"]
+font_color = Color(0.467858, 0.672588, 1, 1)
+outline_size = 5
+outline_color = Color(0.347191, 0.458609, 0.999999, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i6ybk"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Keep_Going!" type="Control"]
 layout_mode = 3
@@ -10,24 +29,26 @@ grow_vertical = 2
 
 [node name="WOW" type="Label" parent="."]
 layout_mode = 0
-offset_left = 370.0
-offset_top = 4.0
-offset_right = 770.0
-offset_bottom = 27.0
+offset_left = 266.0
+offset_right = 864.0
+offset_bottom = 34.0
 text = "YOU OBTAINED THE [1ST] GOLDEN DREAM SYMBOL!"
+label_settings = SubResource("LabelSettings_yixr3")
 
 [node name="IE!" type="Label" parent="WOW"]
 layout_mode = 0
-offset_left = -95.0
-offset_top = 25.0
-offset_right = 491.0
-offset_bottom = 48.0
+offset_left = 6.0
+offset_top = 33.0
+offset_right = 592.0
+offset_bottom = 56.0
 text = "BUT YOU'RE NOT DONE YET! YOU STILL HAVE A TOTAL OF [2] MORE TO FIND!"
+label_settings = SubResource("LabelSettings_3kn81")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 154.0
-offset_top = 355.0
-offset_right = 994.0
-offset_bottom = 378.0
-text = "TYPE A MESSAGE BELOW IN THE TEXTBOX TO THEN SHARE TO YOUR FRIENDS AND PROVE [YOU] PLAY GAMES!"
+offset_left = 65.0
+offset_top = 367.0
+offset_right = 1100.0
+offset_bottom = 390.0
+text = "FOR MAKING IT THIS FAR; TYPE A MESSAGE BELOW IN THE TEXTBOX TO THEN SHARE TO YOUR FRIENDS AND PROVE [YOU] PLAY GAMES!"
+label_settings = SubResource("LabelSettings_i6ybk")

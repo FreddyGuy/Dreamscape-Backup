@@ -1,12 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://qjqu12goud58"]
+[gd_scene load_steps=4 format=3 uid="uid://qjqu12goud58"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_j8yka"]
 font_size = 21
 font_color = Color(0, 0.988847, 0.441237, 1)
 outline_size = 4
-outline_color = Color(1.2514e-06, 0.913165, 0.692957, 1)
+outline_color = Color(1.05888e-06, 0.926118, 0.538216, 1)
 shadow_size = 5
 shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kx5ti"]
+font_color = Color(8.66354e-07, 0.925242, 0.550606, 1)
+outline_size = 5
+outline_color = Color(1.44392e-06, 0.851562, 0.420402, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_r6g5e"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [node name="Tutorial_Complete!" type="Control"]
 layout_mode = 3
@@ -32,11 +43,13 @@ offset_top = 28.0
 offset_right = 649.0
 offset_bottom = 51.0
 text = "HOPE IT WASN'T TOO DIFFICULT [HA HA] NOW GET OUT THERE AND PLAY THE ACTUAL GAME!"
+label_settings = SubResource("LabelSettings_kx5ti")
 
 [node name="Yeah_" type="Label" parent="."]
 layout_mode = 0
-offset_left = 536.0
-offset_top = 596.0
-offset_right = 635.0
-offset_bottom = 619.0
+offset_left = 520.0
+offset_top = 358.0
+offset_right = 619.0
+offset_bottom = 381.0
 text = "GOOD LUCK!"
+label_settings = SubResource("LabelSettings_r6g5e")

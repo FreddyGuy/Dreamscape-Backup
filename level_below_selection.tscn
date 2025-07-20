@@ -1,13 +1,19 @@
 [gd_scene load_steps=7 format=3 uid="uid://ceddna3yiqe2r"]
 
-[ext_resource type="Script" path="res://button.gd" id="1_k6smb"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_ykwdv"]
-outline_size = 4
-outline_color = Color(0, 0, 0, 1)
-
 [sub_resource type="LabelSettings" id="LabelSettings_17n7i"]
 font_size = 23
+font_color = Color(1, 0.248705, 0.283649, 1)
+outline_size = 6
+outline_color = Color(1, 0.0395963, 0.0286692, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_21mpa"]
+font_color = Color(0.703514, 0.113084, 0, 1)
+outline_size = 4
+outline_color = Color(0.428144, 0, 0.0388606, 1)
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_somrw"]
 outline_size = 4
@@ -18,35 +24,23 @@ outline_size = 3
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ifkcj"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4x21f"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [node name="LEVEL_BELOW_SELECTION" type="Control"]
 layout_mode = 3
-anchors_preset = 15
+anchor_left = 0.002
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -2.304
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="."]
-layout_mode = 0
-offset_left = 507.0
-offset_top = 336.0
-offset_right = 684.0
-offset_bottom = 380.0
-script = ExtResource("1_k6smb")
-
-[node name="Delve" type="Label" parent="Button"]
-light_mask = 2
-visibility_layer = 2
-layout_mode = 0
-offset_left = 14.0
-offset_top = 11.0
-offset_right = 167.0
-offset_bottom = 34.0
-text = "SLEEP [AND] LOST."
-label_settings = SubResource("LabelSettings_ykwdv")
-
-[node name="Label" type="Label" parent="."]
+[node name="Title" type="Label" parent="."]
 layout_mode = 0
 offset_left = 49.0
 offset_top = 32.0
@@ -62,6 +56,7 @@ offset_top = 66.0
 offset_right = 981.0
 offset_bottom = 89.0
 text = "REAL FUNNY. GET BACK IN THERE AND PRESS THE BUTTON BELOW TO EXPERIENCE SOMETHING [_]"
+label_settings = SubResource("LabelSettings_21mpa")
 
 [node name="FUNNY" type="Label" parent="."]
 layout_mode = 0
@@ -97,3 +92,4 @@ offset_top = 23.0
 offset_right = 768.0
 offset_bottom = 46.0
 text = "TYPE SOMETHING IN THE TEXT BOX BELOW TO SHARE TO YOUR FRIENDS AND PROVE [YOU] MADE IT THIS FAR!"
+label_settings = SubResource("LabelSettings_4x21f")
