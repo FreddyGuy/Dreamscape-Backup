@@ -67,3 +67,10 @@ offset_right = 754.0
 offset_bottom = 636.0
 text = "THANK YOU [SO MUCH] FOR PLAYING MY GAME!"
 label_settings = SubResource("LabelSettings_5nmm7")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 320.0
+offset_right = 1087.0
+offset_bottom = 593.0

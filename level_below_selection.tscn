@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://ceddna3yiqe2r"]
+[gd_scene load_steps=8 format=3 uid="uid://ceddna3yiqe2r"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_17n7i"]
 font_size = 23
@@ -29,6 +29,10 @@ outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4x21f"]
 outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_n3pmb"]
+outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
 [node name="LEVEL_BELOW_SELECTION" type="Control"]
@@ -93,3 +97,20 @@ offset_right = 768.0
 offset_bottom = 46.0
 text = "TYPE SOMETHING IN THE TEXT BOX BELOW TO SHARE TO YOUR FRIENDS AND PROVE [YOU] MADE IT THIS FAR!"
 label_settings = SubResource("LabelSettings_4x21f")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 507.0
+offset_top = 336.0
+offset_right = 684.0
+offset_bottom = 380.0
+
+[node name="Delve" type="Label" parent="Button"]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 0
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 166.0
+offset_bottom = 34.0
+text = "SLEEP [AND] DELVE."
+label_settings = SubResource("LabelSettings_n3pmb")

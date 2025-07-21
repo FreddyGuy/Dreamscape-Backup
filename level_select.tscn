@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://d2atwfdlgsbr7"]
 
-[ext_resource type="Script" path="res://button.gd" id="1_pgy7v"]
+[ext_resource type="Script" path="res://level_select.gd" id="1_754i5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5oiql"]
 outline_size = 4
@@ -14,11 +14,10 @@ shadow_size = 8
 shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_2fdlr"]
-font_color = Color(0, 0, 0, 1)
 outline_size = 4
 outline_color = Color(0, 0.901961, 0.909804, 1)
-shadow_size = 3
-shadow_color = Color(1, 1, 1, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_vf7rr"]
 outline_size = 5
@@ -29,8 +28,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_754i5")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
@@ -38,7 +39,6 @@ offset_left = 507.0
 offset_top = 336.0
 offset_right = 684.0
 offset_bottom = 380.0
-script = ExtResource("1_pgy7v")
 
 [node name="Delve" type="Label" parent="Button"]
 light_mask = 2
@@ -77,3 +77,5 @@ offset_right = 1091.0
 offset_bottom = 332.0
 text = "OH NO! IT SEEMS AS IF BUBBLE HAS WENT INTO A DEEP SLEEP... AND SHE CAN'T WAKE UP! FIND THE 3 GOLDEN DREAM SYMBOLS."
 label_settings = SubResource("LabelSettings_vf7rr")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

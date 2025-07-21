@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://qjqu12goud58"]
+[gd_scene load_steps=6 format=3 uid="uid://qjqu12goud58"]
+
+[ext_resource type="Script" path="res://tutorial_complete!.gd" id="1_ae1t5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_j8yka"]
 font_size = 21
@@ -19,6 +21,10 @@ shadow_color = Color(0, 0, 0, 1)
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_ebdyi"]
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
 [node name="Tutorial_Complete!" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -26,6 +32,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ae1t5")
 
 [node name="Winner!" type="Label" parent="."]
 layout_mode = 0
@@ -53,3 +60,22 @@ offset_right = 619.0
 offset_bottom = 381.0
 text = "GOOD LUCK!"
 label_settings = SubResource("LabelSettings_r6g5e")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 486.0
+offset_top = 312.0
+offset_right = 663.0
+offset_bottom = 356.0
+
+[node name="Delve" type="Label" parent="Button"]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 0
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 166.0
+offset_bottom = 34.0
+text = "SLEEP [AND] DELVE."
+label_settings = SubResource("LabelSettings_ebdyi")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

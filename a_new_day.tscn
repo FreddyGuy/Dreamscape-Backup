@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://34utk3h3fhft"]
+[gd_scene load_steps=3 format=3 uid="uid://34utk3h3fhft"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_pklj2"]
+[ext_resource type="Texture2D" uid="uid://dlkowxcsy5srp" path="res://Scary.png" id="2_jgk48"]
 
 [node name="A_New_Day" type="Node2D"]
 
@@ -17,3 +18,10 @@ script = ExtResource("1_pklj2")
 
 [node name="Float_Timer" type="Timer" parent="Bubble"]
 wait_time = 3.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Sonic" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(1068, 571)
+scale = Vector2(0.277164, 0.277164)
+texture = ExtResource("2_jgk48")
