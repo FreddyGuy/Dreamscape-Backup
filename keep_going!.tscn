@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://st2yw5hrtpf4"]
+[gd_scene load_steps=5 format=3 uid="uid://st2yw5hrtpf4"]
 
 [ext_resource type="Script" path="res://keep_going!.gd" id="1_ndcpr"]
 
@@ -16,10 +16,6 @@ outline_size = 5
 outline_color = Color(0.347191, 0.458609, 0.999999, 1)
 shadow_size = 5
 shadow_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_i6ybk"]
-outline_size = 5
-outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_jat55"]
 outline_size = 4
@@ -51,16 +47,8 @@ offset_bottom = 56.0
 text = "BUT YOU'RE NOT DONE YET! YOU STILL HAVE A TOTAL OF [2] MORE TO FIND!"
 label_settings = SubResource("LabelSettings_3kn81")
 
-[node name="Label" type="Label" parent="."]
-layout_mode = 0
-offset_left = 65.0
-offset_top = 367.0
-offset_right = 1100.0
-offset_bottom = 390.0
-text = "FOR MAKING IT THIS FAR; TYPE A MESSAGE BELOW IN THE TEXTBOX TO THEN SHARE TO YOUR FRIENDS AND PROVE [YOU] PLAY GAMES!"
-label_settings = SubResource("LabelSettings_i6ybk")
-
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 494.0
 offset_top = 323.0
 offset_right = 671.0

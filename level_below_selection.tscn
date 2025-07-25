@@ -1,5 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://ceddna3yiqe2r"]
 
+[ext_resource type="Script" path="res://level_below_selection.gd" id="1_uhs4g"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_17n7i"]
 font_size = 23
 font_color = Color(1, 0.248705, 0.283649, 1)
@@ -16,18 +18,14 @@ shadow_size = 3
 shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_somrw"]
-outline_size = 4
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_1gl7q"]
-outline_size = 3
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_ifkcj"]
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_4x21f"]
+[sub_resource type="LabelSettings" id="LabelSettings_1gl7q"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ifkcj"]
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
@@ -43,6 +41,7 @@ anchor_bottom = 1.0
 offset_left = -2.304
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_uhs4g")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
@@ -82,23 +81,15 @@ label_settings = SubResource("LabelSettings_1gl7q")
 
 [node name="Notice" type="Label" parent="."]
 layout_mode = 0
-offset_left = 257.0
-offset_top = 435.0
-offset_right = 951.0
-offset_bottom = 458.0
-text = "DON'T FEEL LIKE WE'RE LEAVING YOU EMPTY HANDED FOR PLAYING OUR GAME THOUGH!"
+offset_left = 351.0
+offset_top = 430.0
+offset_right = 843.0
+offset_bottom = 453.0
+text = "THANK YOU FOR PLAYING MY GAME [AND] MAKING IT THIS FAR!"
 label_settings = SubResource("LabelSettings_ifkcj")
 
-[node name="Label" type="Label" parent="Notice"]
-layout_mode = 0
-offset_left = -76.0
-offset_top = 23.0
-offset_right = 768.0
-offset_bottom = 46.0
-text = "TYPE SOMETHING IN THE TEXT BOX BELOW TO SHARE TO YOUR FRIENDS AND PROVE [YOU] MADE IT THIS FAR!"
-label_settings = SubResource("LabelSettings_4x21f")
-
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 507.0
 offset_top = 336.0
 offset_right = 684.0
@@ -114,3 +105,5 @@ offset_right = 166.0
 offset_bottom = 34.0
 text = "SLEEP [AND] DELVE."
 label_settings = SubResource("LabelSettings_n3pmb")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

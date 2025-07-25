@@ -1,6 +1,8 @@
 extends CharacterBody2D
 
+signal respawned()
 
+var health := 1
 var WALK_SPEED = 200.0
 var SHORT_JUMP_HEIGHT = -200.0
 var SPRINT_SPEED = 450.0
@@ -47,3 +49,5 @@ func _physics_process(delta):
 	
 	# Respawn System
 	
+	if health <= 0:
+		respawned.emit()

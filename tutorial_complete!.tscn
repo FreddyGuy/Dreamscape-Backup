@@ -62,6 +62,7 @@ text = "GOOD LUCK!"
 label_settings = SubResource("LabelSettings_r6g5e")
 
 [node name="Button" type="Button" parent="."]
+layout_mode = 0
 offset_left = 486.0
 offset_top = 312.0
 offset_right = 663.0

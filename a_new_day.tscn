@@ -1,14 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://34utk3h3fhft"]
+[gd_scene load_steps=8 format=3 uid="uid://34utk3h3fhft"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_pklj2"]
+[ext_resource type="Script" path="res://a_new_day.gd" id="1_sv74k"]
 [ext_resource type="Texture2D" uid="uid://dlkowxcsy5srp" path="res://Scary.png" id="2_jgk48"]
+[ext_resource type="Script" path="res://area_2d.gd" id="4_kc126"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y2w40"]
+size = Vector2(510, 270)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2tseg"]
+font_size = 18
+
+[sub_resource type="LabelSettings" id="LabelSettings_rqja4"]
+font_size = 10
 
 [node name="A_New_Day" type="Node2D"]
+script = ExtResource("1_sv74k")
 
 [node name="Bubble" type="CharacterBody2D" parent="."]
+position = Vector2(-1408, 323)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_pklj2")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bubble"]
 
@@ -20,8 +34,100 @@ script = ExtResource("1_pklj2")
 wait_time = 3.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(-1, 669)
+metadata/_edit_group_ = true
 
 [node name="Sonic" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(1068, 571)
-scale = Vector2(0.277164, 0.277164)
+position = Vector2(579, 1123)
+scale = Vector2(0.862903, 0.497698)
 texture = ExtResource("2_jgk48")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(579, 1123)
+shape = SubResource("RectangleShape2D_y2w40")
+
+[node name="Notice" type="Label" parent="."]
+offset_left = 489.0
+offset_top = 21.0
+offset_right = 713.0
+offset_bottom = 44.0
+text = "DON'T FALL DOWN THAT PIT."
+
+[node name="Jump" type="Label" parent="."]
+offset_left = 492.0
+offset_top = 613.0
+offset_right = 693.0
+offset_bottom = 636.0
+text = "REACH THE WINDS FINEST"
+
+[node name="Label" type="Label" parent="Jump"]
+layout_mode = 0
+offset_left = -13.0
+offset_top = 16.0
+offset_right = 209.0
+offset_bottom = 42.0
+text = "AND REACH THE HIGHEST"
+label_settings = SubResource("LabelSettings_2tseg")
+
+[node name="Label2" type="Label" parent="Jump"]
+layout_mode = 0
+offset_left = -136.0
+offset_top = 38.0
+offset_right = 344.0
+offset_bottom = 54.0
+text = "BUT IF YOU ARE IN A POSITION OF WEAKNESS. YOU CAN ALWAYS TRY AGAIN TO A WEAKER RESULT."
+label_settings = SubResource("LabelSettings_rqja4")
+
+[node name="Move" type="Label" parent="."]
+offset_left = -1083.0
+offset_top = 19.0
+offset_right = -883.0
+offset_bottom = 42.0
+text = "TAKE A STEP FORWARDS..."
+
+[node name="Label" type="Label" parent="Move"]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 15.0
+offset_right = 205.0
+offset_bottom = 38.0
+text = "(you're supposed to move.)"
+
+[node name="Run" type="Label" parent="."]
+offset_left = -623.0
+offset_top = 14.0
+offset_right = 78.0
+offset_bottom = 37.0
+text = "YOU KNOW WHICH BUTTON TO PRESS IF YOU WAN'T TO GO A LITTLE FASTER [AND HIGHER]"
+
+[node name="FLOAT" type="Label" parent="."]
+offset_left = 1323.0
+offset_top = 19.0
+offset_right = 1703.0
+offset_bottom = 42.0
+text = "YOU HAVE A POTENTIAL, TAKE ADVANTAGE OF IT."
+
+[node name="Label" type="Label" parent="FLOAT"]
+layout_mode = 0
+offset_left = -58.0
+offset_top = 21.0
+offset_right = 448.0
+offset_bottom = 44.0
+text = "AND PERFORM THE ACTION AFTER JUMPING WE DARE NOT NAME."
+
+[node name="Congratulation" type="Label" parent="."]
+offset_left = 3041.0
+offset_top = 29.0
+offset_right = 3131.0
+offset_bottom = 52.0
+text = "YOU DID IT!"
+
+[node name="Respawn" type="Marker2D" parent="."]
+position = Vector2(-648, 344)
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("4_kc126")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
