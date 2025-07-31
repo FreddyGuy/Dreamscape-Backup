@@ -40,7 +40,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("Sprint"):
 		WALK_SPEED = SPRINT_SPEED
 	if not is_on_floor():
-		velocity += CAN_FLOAT
+		velocity = CAN_FLOAT
 	if Input.is_action_pressed("Float") and CAN_FLOAT:
 		FLOAT_SPEED = true
 		$Float_Timer.start()

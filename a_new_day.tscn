@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://34utk3h3fhft"]
+[gd_scene load_steps=28 format=3 uid="uid://34utk3h3fhft"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_pklj2"]
 [ext_resource type="Script" path="res://a_new_day.gd" id="1_sv74k"]
@@ -6,9 +6,10 @@
 [ext_resource type="Script" path="res://dirty_bubble.gd" id="4_acpk2"]
 [ext_resource type="Script" path="res://area_2d.gd" id="4_kc126"]
 [ext_resource type="Texture2D" uid="uid://cponnchs57bml" path="res://maxresdefault.jpg" id="5_oylir"]
-[ext_resource type="Texture2D" uid="uid://bamorxnpin0q6" path="res://FATTY.png" id="6_n4stw"]
+[ext_resource type="Texture2D" uid="uid://bm2wk1xjbvxfq" path="res://Red_bubble.png" id="6_gkydk"]
 [ext_resource type="Script" path="res://sonic.gd" id="6_rbiiw"]
 [ext_resource type="Script" path="res://porky.gd" id="7_udxbn"]
+[ext_resource type="Script" path="res://sonic_exe.gd" id="10_a1y2s"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_lt7bt"]
 font_size = 17
@@ -17,11 +18,39 @@ outline_size = 3
 outline_color = Color(1, 0, 0.0352941, 1)
 shadow_color = Color(0, 0, 0, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_yhf2q"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
 [sub_resource type="LabelSettings" id="LabelSettings_2tseg"]
 font_size = 18
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_rqja4"]
 font_size = 10
+outline_size = 3
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_jvfmu"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fmrro"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ysf5f"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dlicj"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_br38s"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_jc7d7"]
 font_size = 30
@@ -29,17 +58,38 @@ outline_size = 6
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_b86sa"]
-outline_size = 3
+outline_size = 5
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_plhfg"]
+font_size = 20
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3b4ph"]
+size = Vector2(471, 1513)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxtcg"]
 size = Vector2(591, 356)
+
+[sub_resource type="LabelSettings" id="LabelSettings_l6br0"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_e5xxi"]
+font_size = 20
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_p4mh6"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
 
 [node name="A_New_Day" type="Node2D"]
 script = ExtResource("1_sv74k")
 
 [node name="Bubble" type="CharacterBody2D" parent="."]
-position = Vector2(-1408, 323)
+position = Vector2(-1855, 321)
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_pklj2")
@@ -68,6 +118,7 @@ offset_top = 587.0
 offset_right = 698.0
 offset_bottom = 610.0
 text = "REACH THE WINDS FINEST"
+label_settings = SubResource("LabelSettings_yhf2q")
 
 [node name="Label" type="Label" parent="Jump"]
 layout_mode = 0
@@ -93,6 +144,7 @@ offset_top = 13.0
 offset_right = -1303.0
 offset_bottom = 36.0
 text = "TAKE A STEP FORWARDS..."
+label_settings = SubResource("LabelSettings_jvfmu")
 
 [node name="Label" type="Label" parent="Move"]
 layout_mode = 0
@@ -101,6 +153,7 @@ offset_top = 15.0
 offset_right = 205.0
 offset_bottom = 38.0
 text = "(you're supposed to move.)"
+label_settings = SubResource("LabelSettings_fmrro")
 
 [node name="Run" type="Label" parent="."]
 offset_left = -744.0
@@ -108,6 +161,7 @@ offset_top = 14.0
 offset_right = -43.0
 offset_bottom = 37.0
 text = "YOU KNOW WHICH BUTTON TO PRESS IF YOU WAN'T TO GO A LITTLE FASTER [AND HIGHER]"
+label_settings = SubResource("LabelSettings_ysf5f")
 
 [node name="FLOAT" type="Label" parent="."]
 offset_left = 1323.0
@@ -115,6 +169,7 @@ offset_top = 19.0
 offset_right = 1703.0
 offset_bottom = 42.0
 text = "YOU HAVE A POTENTIAL, TAKE ADVANTAGE OF IT."
+label_settings = SubResource("LabelSettings_dlicj")
 
 [node name="Label" type="Label" parent="FLOAT"]
 layout_mode = 0
@@ -123,6 +178,7 @@ offset_top = 21.0
 offset_right = 448.0
 offset_bottom = 44.0
 text = "AND PERFORM THE ACTION AFTER JUMPING WE DARE NOT NAME."
+label_settings = SubResource("LabelSettings_br38s")
 
 [node name="Congratulation" type="Label" parent="."]
 offset_left = 4561.0
@@ -158,26 +214,200 @@ script = ExtResource("4_acpk2")
 [node name="Sprite2D" type="Sprite2D" parent="Dirty_Bubble"]
 
 [node name="OH NO!" type="Label" parent="."]
-offset_left = 3173.0
-offset_top = 160.0
-offset_right = 3338.0
-offset_bottom = 183.0
-text = "UH OH! WALL OF PORKY!"
+offset_left = 3125.0
+offset_top = 13.0
+offset_right = 3429.0
+offset_bottom = 41.0
+text = "UH OH! WALL OF RED BUBBLES!"
+label_settings = SubResource("LabelSettings_plhfg")
 
-[node name="PORKY" type="Area2D" parent="."]
-position = Vector2(3740, 344)
+[node name="Red_Bubbles" type="Area2D" parent="."]
+position = Vector2(3701, 760)
 script = ExtResource("7_udxbn")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PORKY"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Red_Bubbles"]
+position = Vector2(2.5, 0.5)
+shape = SubResource("RectangleShape2D_3b4ph")
+metadata/_edit_group_ = true
 
-[node name="FATPORKY_1" type="Sprite2D" parent="PORKY"]
-position = Vector2(0, -126)
-texture = ExtResource("6_n4stw")
+[node name="RedBubble" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-138, -697)
+texture = ExtResource("6_gkydk")
 
-[node name="FATPORKY_2" type="Sprite2D" parent="PORKY"]
-position = Vector2(0, 126)
-rotation = -3.14159
-texture = ExtResource("6_n4stw")
+[node name="RedBubble2" type="Sprite2D" parent="Red_Bubbles"]
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble3" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(79, -585)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble4" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(0, -690)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble5" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-76, -585)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble6" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(126, -697)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble7" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(3, -369)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble8" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-2, -489)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble9" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(165, -309)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble10" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(172, -489)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble11" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-177, -302)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble12" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-177, -482)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble13" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(80, -150)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble14" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-71, -233)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble15" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(190, -192)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble16" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-46, -105)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble17" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(45, -265)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble18" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-184, -154)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble19" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-166, -17)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble20" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-106, 93)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble21" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(152, -57)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble22" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(119, 76)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble23" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-183, 207)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble24" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(3, 184)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble25" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(188, 191)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble26" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(100, 297)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble27" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-87, 294)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble28" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-2, 397)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble29" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-177, 379)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble30" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(190, 380)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble31" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(105, 466)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble32" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-117, 475)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble33" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-180, 580)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble34" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-78, 601)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble35" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-183, 702)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble36" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(63, 709)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble37" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-1, 541)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble38" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(105, 601)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble39" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(186, 705)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble40" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(193, 526)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble41" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-46, 698)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble42" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-106, -393)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble43" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(98, -401)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble44" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(-185, -597)
+texture = ExtResource("6_gkydk")
+
+[node name="RedBubble45" type="Sprite2D" parent="Red_Bubbles"]
+position = Vector2(190, -597)
+texture = ExtResource("6_gkydk")
 
 [node name="SONIC" type="Area2D" parent="."]
 position = Vector2(619, 1608)
@@ -197,5 +427,37 @@ texture = ExtResource("5_oylir")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="SONIC"]
 position = Vector2(0.5, 64)
 shape = SubResource("RectangleShape2D_hxtcg")
+
+[node name="Sagat" type="Area2D" parent="."]
+script = ExtResource("10_a1y2s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sagat"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Sagat"]
+
+[node name="Tunnel" type="Label" parent="."]
+offset_left = 1703.0
+offset_top = 823.0
+offset_right = 1852.0
+offset_bottom = 846.0
+text = "TUNNEL OF SAGAT."
+label_settings = SubResource("LabelSettings_l6br0")
+
+[node name="Winning" type="Label" parent="."]
+offset_left = 4056.0
+offset_top = 1608.0
+offset_right = 4269.0
+offset_bottom = 1631.0
+text = "Thanks for the help Bubble!"
+label_settings = SubResource("LabelSettings_e5xxi")
+
+[node name="Label" type="Label" parent="Winning"]
+layout_mode = 0
+offset_left = -165.0
+offset_top = 28.0
+offset_right = 433.0
+offset_bottom = 51.0
+text = "The exit is up that ledge right behind me, jump on top of my head for a boost!"
+label_settings = SubResource("LabelSettings_p4mh6")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
