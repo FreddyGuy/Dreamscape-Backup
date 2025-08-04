@@ -16,6 +16,8 @@ var IS_FLOATING = false
 var CAN_FLOAT = false
 var CAN_STRUGGLE_JUMP = false
 
+@onready var RESPAWN_POSITION = position 
+
 func _physics_process(delta):
 	# Add the gravity.
 	if not is_on_floor():
@@ -39,8 +41,8 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, WALK_SPEED)
 	if Input.is_action_pressed("Sprint"):
 		WALK_SPEED = SPRINT_SPEED
-	if not is_on_floor():
-		velocity = CAN_FLOAT
+	#if not is_on_floor():
+		#velocity = CAN_FLOAT
 	if Input.is_action_pressed("Float") and CAN_FLOAT:
 		FLOAT_SPEED = true
 		$Float_Timer.start()
@@ -51,3 +53,7 @@ func _physics_process(delta):
 	
 	if health <= 0:
 		respawned.emit()
+
+func respawn():
+	position = RESPAWN_POSITION
+	
