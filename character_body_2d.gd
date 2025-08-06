@@ -3,7 +3,7 @@ extends CharacterBody2D
 signal respawned()
 
 var health := 1
-var WALK_SPEED = 200.0
+var WALK_SPEED = 500.0
 var SHORT_JUMP_HEIGHT = -200.0
 var SPRINT_SPEED = 450.0
 var HIGH_JUMP_VELOCITY = -450.0
