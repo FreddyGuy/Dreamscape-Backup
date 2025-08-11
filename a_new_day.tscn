@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=4 uid="uid://34utk3h3fhft"]
+[gd_scene load_steps=66 format=4 uid="uid://34utk3h3fhft"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_pklj2"]
 [ext_resource type="Script" path="res://a_new_day.gd" id="1_sv74k"]
@@ -261,11 +261,26 @@ size = Vector2(205, 1110)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_llv2m"]
 size = Vector2(31, 254)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f7mme"]
+size = Vector2(186, 1033)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tgmxq"]
+size = Vector2(25, 235)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wiwbs"]
+size = Vector2(366, 221)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c05i3"]
+size = Vector2(164.999, 214)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u85p7"]
+size = Vector2(615, 201.999)
+
 [node name="A_New_Day" type="Node2D"]
 script = ExtResource("1_sv74k")
 
 [node name="Bubble" type="CharacterBody2D" parent="."]
-position = Vector2(-1855, 355)
+position = Vector2(-1920, 366)
 script = ExtResource("1_pklj2")
 metadata/_edit_group_ = true
 
@@ -368,7 +383,7 @@ text = "TAKE YOUR NEWLY OBTAINED PLAYER LICENSE TO MOVE ON!"
 label_settings = SubResource("LabelSettings_b86sa")
 
 [node name="Respawn" type="Marker2D" parent="."]
-position = Vector2(-648, 344)
+position = Vector2(-1918, 325)
 
 [node name="Area2D" type="Area2D" parent="."]
 visible = false
@@ -377,10 +392,10 @@ script = ExtResource("4_kc126")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 
 [node name="OH NO!" type="Label" parent="."]
-offset_left = 3125.0
-offset_top = 13.0
-offset_right = 3429.0
-offset_bottom = 41.0
+offset_left = 3130.0
+offset_top = 33.0
+offset_right = 3434.0
+offset_bottom = 61.0
 text = "UH OH! WALL OF RED BUBBLES!"
 label_settings = SubResource("LabelSettings_plhfg")
 
@@ -615,9 +630,9 @@ text = "TUNNEL OF SAGAT."
 label_settings = SubResource("LabelSettings_l6br0")
 
 [node name="Winning" type="Label" parent="."]
-offset_left = 6119.0
+offset_left = 6127.0
 offset_top = 3752.0
-offset_right = 6386.0
+offset_right = 6394.0
 offset_bottom = 3780.0
 text = "Thanks for the help Bubble!"
 label_settings = SubResource("LabelSettings_e5xxi")
@@ -1117,6 +1132,72 @@ shape = SubResource("RectangleShape2D_r1rp7")
 position = Vector2(-87.5, -10)
 shape = SubResource("RectangleShape2D_llv2m")
 
+[node name="Sagat10" type="Area2D" parent="."]
+position = Vector2(5077, 3757)
+script = ExtResource("10_a1y2s")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Sagat10"]
+position = Vector2(0.750162, -337)
+scale = Vector2(0.592331, 1.8042)
+texture = ExtResource("11_l47rv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sagat10"]
+position = Vector2(14, -336.5)
+shape = SubResource("RectangleShape2D_f7mme")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Sagat10"]
+position = Vector2(-91.5, -634.5)
+shape = SubResource("RectangleShape2D_tgmxq")
+
+[node name="Sagat11" type="Area2D" parent="."]
+position = Vector2(4854, 3504)
+rotation = 1.5708
+script = ExtResource("10_a1y2s")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Sagat11"]
+position = Vector2(-79.7572, -34.0584)
+scale = Vector2(1.04123, 0.38528)
+texture = ExtResource("11_l47rv")
+flip_h = true
+flip_v = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sagat11"]
+position = Vector2(-81, -33.5)
+shape = SubResource("RectangleShape2D_wiwbs")
+
+[node name="Sagat12" type="Area2D" parent="."]
+position = Vector2(4801, 3004)
+rotation = 1.5708
+script = ExtResource("10_a1y2s")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Sagat12"]
+position = Vector2(-21.6405, 61.5346)
+scale = Vector2(0.465111, 0.372912)
+texture = ExtResource("11_l47rv")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sagat12"]
+position = Vector2(-22.4998, 62)
+shape = SubResource("RectangleShape2D_c05i3")
+
+[node name="Sagat13" type="Area2D" parent="."]
+position = Vector2(4248, 3378)
+rotation = 1.5708
+script = ExtResource("10_a1y2s")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Sagat13"]
+position = Vector2(3.85207, 66.8319)
+scale = Vector2(1.74639, 0.35439)
+texture = ExtResource("11_l47rv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sagat13"]
+position = Vector2(4.50024, 66.9995)
+shape = SubResource("RectangleShape2D_u85p7")
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Red_Bubbles" to="Red_Bubbles" method="_on_body_entered"]
 [connection signal="body_entered" from="SONIC" to="SONIC" method="_on_body_entered"]
@@ -1134,3 +1215,7 @@ shape = SubResource("RectangleShape2D_llv2m")
 [connection signal="body_entered" from="Sagat7" to="Sagat7" method="_on_body_entered"]
 [connection signal="body_entered" from="Sagat8" to="Sagat8" method="_on_body_entered"]
 [connection signal="body_entered" from="Sagat9" to="Sagat9" method="_on_body_entered"]
+[connection signal="body_entered" from="Sagat10" to="Sagat10" method="_on_body_entered"]
+[connection signal="body_entered" from="Sagat11" to="Sagat11" method="_on_body_entered"]
+[connection signal="body_entered" from="Sagat12" to="Sagat12" method="_on_body_entered"]
+[connection signal="body_entered" from="Sagat13" to="Sagat13" method="_on_body_entered"]
