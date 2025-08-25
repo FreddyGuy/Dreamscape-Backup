@@ -1,3 +1,45 @@
-[gd_scene format=3 uid="uid://m5cu4h5d1sl6"]
+[gd_scene load_steps=6 format=3 uid="uid://m5cu4h5d1sl6"]
+
+[ext_resource type="Texture2D" uid="uid://75wcncw23sfg" path="res://FISHISAWESOME.png" id="1_l5e4f"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghgtq"]
+atlas = ExtResource("1_l5e4f")
+region = Rect2(640, 0, 640, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jr0w"]
+atlas = ExtResource("1_l5e4f")
+region = Rect2(1280, 0, 640, 800)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65ctl"]
+atlas = ExtResource("1_l5e4f")
+region = Rect2(0, 0, 640, 800)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jvp34"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghgtq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jr0w")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65ctl")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
 
 [node name="Drowned Out Phobias" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(864, 318)
+sprite_frames = SubResource("SpriteFrames_jvp34")
+animation = &"Idle"
+autoplay = "Idle"
