@@ -26,7 +26,9 @@ animations = [{
 
 [node name="Creature\'s Cursed Story" type="Node2D"]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="RUN FOR YOUR LIFE_" type="Area2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="RUN FOR YOUR LIFE_"]
 position = Vector2(307, 284)
 scale = Vector2(0.566667, 0.566667)
 sprite_frames = SubResource("SpriteFrames_ykgfi")

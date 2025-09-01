@@ -10,6 +10,6 @@ func _on_body_entered(body: Node2D) -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	rotation_degrees += 100 * delta
+	rotation_degrees += 110 * delta
 	
 	
