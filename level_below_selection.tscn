@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ceddna3yiqe2r"]
+[gd_scene load_steps=7 format=3 uid="uid://ceddna3yiqe2r"]
 
 [ext_resource type="Script" path="res://level_below_selection.gd" id="1_uhs4g"]
 
@@ -11,9 +11,8 @@ shadow_size = 5
 shadow_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_21mpa"]
-font_color = Color(0.703514, 0.113084, 0, 1)
 outline_size = 4
-outline_color = Color(0.428144, 0, 0.0388606, 1)
+outline_color = Color(0.00788094, 0.512746, 0, 1)
 shadow_size = 3
 shadow_color = Color(0, 0, 0, 1)
 
@@ -22,10 +21,6 @@ outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_1gl7q"]
-outline_size = 5
-outline_color = Color(0, 0, 0, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_ifkcj"]
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
@@ -45,48 +40,39 @@ script = ExtResource("1_uhs4g")
 
 [node name="Title" type="Label" parent="."]
 layout_mode = 0
-offset_left = 49.0
-offset_top = 32.0
-offset_right = 1113.0
-offset_bottom = 64.0
-text = "HAVE YOU EVER THOUGHT [TO YOURSELF] YOU'VE SEEN EVERYTHING THIS GAME HAS TO OFFER?"
+offset_left = 360.0
+offset_top = 29.0
+offset_right = 850.0
+offset_bottom = 61.0
+text = "Alright it was going to arrive sooner or later."
 label_settings = SubResource("LabelSettings_17n7i")
 
-[node name="REAL" type="Label" parent="."]
+[node name="REAL" type="Label" parent="Title"]
 layout_mode = 0
-offset_left = 229.0
-offset_top = 66.0
-offset_right = 981.0
-offset_bottom = 89.0
-text = "REAL FUNNY. GET BACK IN THERE AND PRESS THE BUTTON BELOW TO EXPERIENCE SOMETHING [_]"
+offset_left = -17.0
+offset_top = 28.0
+offset_right = 506.0
+offset_bottom = 51.0
+text = "If you have symptoms of diapointment we have something for YOU!"
 label_settings = SubResource("LabelSettings_21mpa")
 
 [node name="FUNNY" type="Label" parent="."]
 layout_mode = 0
-offset_left = 100.0
-offset_top = 387.0
-offset_right = 1084.0
-offset_bottom = 410.0
+offset_left = 105.0
+offset_top = 403.0
+offset_right = 1089.0
+offset_bottom = 426.0
 text = "NOTICE: THE FOLLOWING CONTAINS POTENTIAL DISTURBING IMAGERY, LOUD NOISES AND FLASHING LIGHTS/EPILETIC EFFECTS."
 label_settings = SubResource("LabelSettings_somrw")
 
 [node name="Label" type="Label" parent="FUNNY"]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 21.0
-offset_right = 947.0
-offset_bottom = 44.0
-text = "IF YOU HAVE EXPERICENED SEIZURES OR ARE SENTIVE TO FOLLOWING TOPICS DO NOT PLAY THE REST OF THIS GAME."
+offset_left = 23.0
+offset_top = 23.0
+offset_right = 952.0
+offset_bottom = 46.0
+text = "IF YOU HAVE EXPERICENED SEIZURES OR ARE SENTIVE TO FOLLOWING TOPICS MAYBE NOT PLAY THE REST OF THIS GAME."
 label_settings = SubResource("LabelSettings_1gl7q")
-
-[node name="Notice" type="Label" parent="."]
-layout_mode = 0
-offset_left = 351.0
-offset_top = 430.0
-offset_right = 843.0
-offset_bottom = 453.0
-text = "THANK YOU FOR PLAYING MY GAME [AND] MAKING IT THIS FAR!"
-label_settings = SubResource("LabelSettings_ifkcj")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=74 format=4 uid="uid://34utk3h3fhft"]
+[gd_scene load_steps=73 format=4 uid="uid://34utk3h3fhft"]
 
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_pklj2"]
 [ext_resource type="Script" path="res://a_new_day.gd" id="1_sv74k"]
@@ -25,8 +25,8 @@
 [ext_resource type="Script" path="res://the_spinner_.gd" id="21_xqy35"]
 [ext_resource type="Script" path="res://geomtry_dash_average_spikes.gd" id="24_nmjns"]
 [ext_resource type="Script" path="res://red_bubble.gd" id="25_drxgl"]
-[ext_resource type="Script" path="res://scripter.gd" id="26_12sru"]
 [ext_resource type="Texture2D" uid="uid://cyqlvgpaaqb77" path="res://Render_Scripter.png" id="27_e064u"]
+[ext_resource type="AudioStream" uid="uid://hqux2elt3k8p" path="res://Crystal_Lake.wav" id="27_sbqip"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_00djj"]
 atlas = ExtResource("3_nlyx0")
@@ -89,7 +89,7 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 5.0,
+"duration": 3.0,
 "texture": SubResource("AtlasTexture_qgwrn")
 }, {
 "duration": 1.0,
@@ -334,21 +334,18 @@ size = Vector2(38, 254)
 [sub_resource type="CircleShape2D" id="CircleShape2D_fc62m"]
 radius = 42.0476
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mv4im"]
-size = Vector2(342, 480)
-
 [sub_resource type="LabelSettings" id="LabelSettings_jud12"]
 line_spacing = 4.0
-font_size = 17
+font_size = 52
 font_color = Color(0.985502, 0.835134, 3.85046e-07, 1)
-outline_size = 5
+outline_size = 15
 outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_y4qg1"]
 line_spacing = 5.0
-font_size = 21
+font_size = 76
 font_color = Color(0.982746, 0, 0.0171709, 1)
-outline_size = 4
+outline_size = 20
 outline_color = Color(0, 0, 0, 1)
 
 [node name="A_New_Day" type="Node2D"]
@@ -374,18 +371,18 @@ autoplay = "Idle"
 polygon = PackedVector2Array(-38, -7, -38, 7, -17, 64, 17, 64, 38, 7, 38, -7, 35, -16, 25, -29, 17, -34, 7, -38, -7, -38, -17, -34, -24, -30, -35, -16)
 
 [node name="Notice" type="Label" parent="."]
-offset_left = 457.0
-offset_top = 43.0
-offset_right = 695.0
-offset_bottom = 67.0
+offset_left = 461.0
+offset_top = 62.0
+offset_right = 699.0
+offset_bottom = 86.0
 text = "DON'T FALL DOWN THAT PIT."
 label_settings = SubResource("LabelSettings_lt7bt")
 
 [node name="Jump" type="Label" parent="."]
-offset_left = 496.0
-offset_top = 519.0
-offset_right = 697.0
-offset_bottom = 542.0
+offset_left = 477.0
+offset_top = 481.0
+offset_right = 678.0
+offset_bottom = 504.0
 text = "REACH THE WINDS FINEST"
 label_settings = SubResource("LabelSettings_yhf2q")
 
@@ -1455,7 +1452,7 @@ position = Vector2(1202, -380)
 polygon = PackedVector2Array(-1206, 0, -1187, 22, -1167, 0, -1147, 38, -1126, 0, -1106, 56, -1085, 1, -1065, 39, -1045, 1, -1025, 55, -1005, 2, -983, 99, -963, 0, -942, 108, -922, 1, -900, 122, -881, 1, -858, 106, -837, 1, -818, 45, -795, 1, -774, 32, -754, 1, -732, 39, -712, 2, -691, 45, -670, 3, -649, 76, -628, 1, -607, 101, -585, 1, -565, 50, -547, -3)
 
 [node name="THE SPINNER_3" type="Area2D" parent="."]
-position = Vector2(2718, 2424)
+position = Vector2(2714, 2446)
 script = ExtResource("21_xqy35")
 metadata/_edit_group_ = true
 
@@ -1475,7 +1472,7 @@ position = Vector2(1, -3)
 shape = SubResource("RectangleShape2D_ddwj4")
 
 [node name="THE SPINNER_4" type="Area2D" parent="."]
-position = Vector2(2840, 3278)
+position = Vector2(2814, 3277)
 script = ExtResource("21_xqy35")
 metadata/_edit_group_ = true
 
@@ -1495,7 +1492,7 @@ position = Vector2(1, -3)
 shape = SubResource("RectangleShape2D_ddwj4")
 
 [node name="THE SPINNER_5" type="Area2D" parent="."]
-position = Vector2(2772, 2861)
+position = Vector2(2777, 2868)
 script = ExtResource("21_xqy35")
 metadata/_edit_group_ = true
 
@@ -2031,7 +2028,7 @@ texture = ExtResource("6_gkydk")
 shape = SubResource("CircleShape2D_fc62m")
 
 [node name="Red Bubble44" type="Area2D" parent="."]
-position = Vector2(8093, 583)
+position = Vector2(8088, 566)
 script = ExtResource("25_drxgl")
 metadata/_edit_group_ = true
 
@@ -2043,7 +2040,7 @@ texture = ExtResource("6_gkydk")
 shape = SubResource("CircleShape2D_fc62m")
 
 [node name="Red Bubble45" type="Area2D" parent="."]
-position = Vector2(8014, 493)
+position = Vector2(8000, 510)
 script = ExtResource("25_drxgl")
 metadata/_edit_group_ = true
 
@@ -2055,7 +2052,7 @@ texture = ExtResource("6_gkydk")
 shape = SubResource("CircleShape2D_fc62m")
 
 [node name="Red Bubble46" type="Area2D" parent="."]
-position = Vector2(7919, 564)
+position = Vector2(7915, 581)
 script = ExtResource("25_drxgl")
 metadata/_edit_group_ = true
 
@@ -2090,34 +2087,30 @@ texture = ExtResource("6_gkydk")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Red Bubble49"]
 shape = SubResource("CircleShape2D_fc62m")
 
-[node name="Scripter" type="Area2D" parent="."]
-position = Vector2(6134, 346)
-script = ExtResource("26_12sru")
-
-[node name="RenderScripter" type="Sprite2D" parent="Scripter"]
-position = Vector2(7, -3)
+[node name="RenderScripter" type="Sprite2D" parent="."]
+position = Vector2(6141, 343)
 scale = Vector2(0.355146, 0.355146)
 texture = ExtResource("27_e064u")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Scripter"]
-position = Vector2(7, -106)
-shape = SubResource("RectangleShape2D_mv4im")
-
-[node name="Label" type="Label" parent="Scripter"]
-offset_left = 159.0
-offset_top = -199.0
-offset_right = 561.0
-offset_bottom = -175.0
+[node name="Label" type="Label" parent="RenderScripter"]
+offset_left = 427.992
+offset_top = -551.886
+offset_right = 829.992
+offset_bottom = -527.886
 text = "You have little to no sense of worth in this fight..."
 label_settings = SubResource("LabelSettings_jud12")
 
-[node name="Label2" type="Label" parent="Scripter"]
-offset_left = 158.0
-offset_top = -176.0
-offset_right = 357.0
-offset_bottom = -146.0
+[node name="Label2" type="Label" parent="RenderScripter"]
+offset_left = 425.178
+offset_top = -487.124
+offset_right = 624.178
+offset_bottom = -457.124
 text = "Get out of my sight."
 label_settings = SubResource("LabelSettings_y4qg1")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_sbqip")
+autoplay = true
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Red_Bubbles" to="Red_Bubbles" method="_on_body_entered"]
@@ -2193,4 +2186,3 @@ label_settings = SubResource("LabelSettings_y4qg1")
 [connection signal="body_entered" from="Red Bubble46" to="Red Bubble46" method="_on_body_entered"]
 [connection signal="body_entered" from="Red Bubble48" to="Red Bubble48" method="_on_body_entered"]
 [connection signal="body_entered" from="Red Bubble49" to="Red Bubble49" method="_on_body_entered"]
-[connection signal="body_entered" from="Scripter" to="Scripter" method="_on_body_entered"]
