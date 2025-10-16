@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://st2yw5hrtpf4"]
+[gd_scene load_steps=6 format=3 uid="uid://st2yw5hrtpf4"]
 
 [ext_resource type="Script" path="res://keep_going!.gd" id="1_ndcpr"]
+[ext_resource type="AudioStream" uid="uid://cammhtq6jisnv" path="res://Winter.wav" id="3_uuhev"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_yixr3"]
 font_size = 24
@@ -17,7 +18,7 @@ outline_color = Color(0.347191, 0.458609, 0.999999, 1)
 shadow_size = 5
 shadow_color = Color(0, 0, 0, 1)
 
-[sub_resource type="LabelSettings" id="LabelSettings_jat55"]
+[sub_resource type="LabelSettings" id="LabelSettings_f7ufo"]
 outline_size = 4
 outline_color = Color(0, 0, 0, 1)
 
@@ -33,8 +34,9 @@ script = ExtResource("1_ndcpr")
 [node name="WOW" type="Label" parent="."]
 layout_mode = 0
 offset_left = 266.0
+offset_top = 26.0
 offset_right = 864.0
-offset_bottom = 34.0
+offset_bottom = 60.0
 text = "YOU OBTAINED THE [1ST] GOLDEN DREAM SYMBOL!"
 label_settings = SubResource("LabelSettings_yixr3")
 
@@ -47,12 +49,17 @@ offset_bottom = 56.0
 text = "BUT YOU'RE NOT DONE YET! YOU STILL HAVE A TOTAL OF [2] MORE TO FIND!"
 label_settings = SubResource("LabelSettings_3kn81")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_uuhev")
+pitch_scale = 0.6
+autoplay = true
+
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
-offset_left = 494.0
-offset_top = 323.0
-offset_right = 671.0
-offset_bottom = 367.0
+offset_left = 491.0
+offset_top = 355.0
+offset_right = 668.0
+offset_bottom = 399.0
 
 [node name="Delve" type="Label" parent="Button"]
 light_mask = 2
@@ -63,6 +70,6 @@ offset_top = 11.0
 offset_right = 166.0
 offset_bottom = 34.0
 text = "SLEEP [AND] DELVE."
-label_settings = SubResource("LabelSettings_jat55")
+label_settings = SubResource("LabelSettings_f7ufo")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

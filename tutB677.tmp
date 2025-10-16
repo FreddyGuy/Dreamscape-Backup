@@ -1,0 +1,89 @@
+[gd_scene load_steps=7 format=3 uid="uid://qjqu12goud58"]
+
+[ext_resource type="Script" path="res://tutorial_complete!.gd" id="1_ae1t5"]
+[ext_resource type="Texture2D" uid="uid://4c1qqli3uj3q" path="res://PlayerLicence.png" id="2_t6d3h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j8yka"]
+font_size = 21
+font_color = Color(0, 0.988847, 0.441237, 1)
+outline_size = 4
+outline_color = Color(1.05888e-06, 0.926118, 0.538216, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kx5ti"]
+font_color = Color(8.66354e-07, 0.925242, 0.550606, 1)
+outline_size = 5
+outline_color = Color(1.44392e-06, 0.851562, 0.420402, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_r6g5e"]
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ebdyi"]
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+
+[node name="Tutorial_Complete!" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ae1t5")
+
+[node name="Winner!" type="Label" parent="."]
+layout_mode = 0
+offset_left = 281.0
+offset_top = 57.0
+offset_right = 843.0
+offset_bottom = 87.0
+text = "YOU'VE COMPLETED THE TUTORIAL PART OF THE GAME!"
+label_settings = SubResource("LabelSettings_j8yka")
+
+[node name="DINNER" type="Label" parent="Winner!"]
+layout_mode = 0
+offset_left = -67.0
+offset_top = 28.0
+offset_right = 649.0
+offset_bottom = 51.0
+text = "HOPE IT WASN'T TOO DIFFICULT [HA HA] NOW GET OUT THERE AND PLAY THE ACTUAL GAME!"
+label_settings = SubResource("LabelSettings_kx5ti")
+
+[node name="Yeah_" type="Label" parent="."]
+layout_mode = 0
+offset_left = 522.0
+offset_top = 586.0
+offset_right = 621.0
+offset_bottom = 609.0
+text = "GOOD LUCK!"
+label_settings = SubResource("LabelSettings_r6g5e")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 543.0
+offset_right = 661.0
+offset_bottom = 587.0
+metadata/_edit_group_ = true
+
+[node name="Delve" type="Label" parent="Button"]
+light_mask = 2
+visibility_layer = 2
+layout_mode = 0
+offset_left = 13.0
+offset_top = 11.0
+offset_right = 166.0
+offset_bottom = 34.0
+text = "SLEEP [AND] DELVE."
+label_settings = SubResource("LabelSettings_ebdyi")
+
+[node name="PlayerLicence" type="Sprite2D" parent="."]
+position = Vector2(575, 333)
+scale = Vector2(1.77059, 1.77059)
+texture = ExtResource("2_t6d3h")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

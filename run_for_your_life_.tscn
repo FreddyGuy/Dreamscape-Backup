@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://hlua3r32ngab"]
+
+[ext_resource type="AudioStream" uid="uid://b6w3osjbf1aak" path="res://FINALE.wav" id="1_dbr4a"]
+
+[node name="RUN FOR YOUR LIFE_" type="Node2D"]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_dbr4a")
+autoplay = true

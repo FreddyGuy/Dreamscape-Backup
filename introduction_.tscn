@@ -1,0 +1,163 @@
+[gd_scene load_steps=20 format=3 uid="uid://b0oofkqfs4bor"]
+
+[ext_resource type="Texture2D" uid="uid://n32tsl2mi3eh" path="res://FISHISDEAD.png" id="1_fyuju"]
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_jcj0c"]
+[ext_resource type="Texture2D" uid="uid://dwuvtq2mieox7" path="res://SpriteSheet_Bubble.png" id="2_77jsd"]
+[ext_resource type="Texture2D" uid="uid://qrcbiy3sakqv" path="res://SkyBox2.png" id="2_yr85j"]
+[ext_resource type="AudioStream" uid="uid://ky12rcsynope" path="res://Lost.wav" id="5_mwhvl"]
+[ext_resource type="Texture2D" uid="uid://dll2tv5egq2wa" path="res://Grassy_tile.png" id="6_vwyak"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_00djj"]
+atlas = ExtResource("2_77jsd")
+region = Rect2(128, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qiw60"]
+atlas = ExtResource("2_77jsd")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fiso5"]
+atlas = ExtResource("2_77jsd")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjj3x"]
+atlas = ExtResource("2_77jsd")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgwrn"]
+atlas = ExtResource("2_77jsd")
+region = Rect2(0, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4uev"]
+atlas = ExtResource("2_77jsd")
+region = Rect2(128, 384, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v540k"]
+atlas = ExtResource("2_77jsd")
+region = Rect2(128, 512, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4f5n2"]
+atlas = ExtResource("2_77jsd")
+region = Rect2(0, 128, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ee36l"]
+atlas = ExtResource("2_77jsd")
+region = Rect2(256, 128, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qq7yj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_00djj")
+}],
+"loop": true,
+"name": &"Fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_qiw60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fiso5")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_vjj3x")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_qgwrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4uev")
+}],
+"loop": true,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v540k")
+}],
+"loop": true,
+"name": &"POP!",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_4f5n2")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_ee36l")
+}],
+"loop": true,
+"name": &"Run Cycle",
+"speed": 5.0
+}]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r8t0q"]
+texture = ExtResource("6_vwyak")
+texture_region_size = Vector2i(300, 300)
+
+[sub_resource type="TileSet" id="TileSet_a27qt"]
+tile_size = Vector2i(300, 300)
+sources/0 = SubResource("TileSetAtlasSource_r8t0q")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qc46l"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[node name="Introduction_" type="Node2D"]
+
+[node name="Fishisdead" type="Sprite2D" parent="."]
+position = Vector2(522.75, 689.5)
+scale = Vector2(0.679167, 0.602778)
+texture = ExtResource("1_fyuju")
+
+[node name="Bubble" type="CharacterBody2D" parent="."]
+position = Vector2(105, 583)
+script = ExtResource("1_jcj0c")
+metadata/_edit_group_ = true
+
+[node name="Camera2D" type="Camera2D" parent="Bubble"]
+zoom = Vector2(0.8, 0.8)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bubble/Camera2D"]
+z_index = -3
+position = Vector2(4.57764e-05, -1.52588e-05)
+scale = Vector2(1.43284, 1.31068)
+texture = ExtResource("2_yr85j")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bubble"]
+sprite_frames = SubResource("SpriteFrames_qq7yj")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bubble"]
+polygon = PackedVector2Array(-38, -7, -38, 7, -17, 64, 17, 64, 38, 7, 38, -7, 35, -16, 25, -29, 17, -34, 7, -38, -7, -38, -17, -34, -24, -30, -35, -16)
+
+[node name="Bubble(?)" type="Area2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_mwhvl")
+pitch_scale = 0.75
+autoplay = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_a27qt")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_qc46l")
+animation = &"new_animation"
